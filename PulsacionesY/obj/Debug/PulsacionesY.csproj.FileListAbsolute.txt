@@ -1,0 +1,13 @@
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\PulsacionesY.exe.config
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\PulsacionesY.exe
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\PulsacionesY.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\BLL.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\Entity.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\DAL.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\BLL.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\Entity.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\bin\Debug\DAL.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\obj\Debug\PulsacionesY.csprojAssemblyReference.cache
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\obj\Debug\PulsacionesY.csproj.CopyComplete
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\obj\Debug\PulsacionesY.exe
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesY\obj\Debug\PulsacionesY.pdb

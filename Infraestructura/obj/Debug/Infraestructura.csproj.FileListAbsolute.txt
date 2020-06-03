@@ -1,0 +1,8 @@
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\obj\Debug\Infraestructura.csprojAssemblyReference.cache
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\bin\Debug\Infraestructura.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\bin\Debug\Infraestructura.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\bin\Debug\Entity.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\bin\Debug\Entity.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\obj\Debug\Infraestructura.csproj.CopyComplete
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\obj\Debug\Infraestructura.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\obj\Debug\Infraestructura.pdb
