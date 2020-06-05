@@ -35,7 +35,7 @@ namespace DAL
                 persona.Identificacion = arrayPersona[0];
                 persona.Nombre = arrayPersona[1];
                 persona.Edad = Convert.ToInt32(arrayPersona[2]);
-                persona.Genero = Convert.ToChar(arrayPersona[3]);
+                persona.Genero = arrayPersona[3];
                 persona.Pulsacion = Convert.ToDecimal(arrayPersona[4]);
                 persona.Email = arrayPersona[5];
                 lPersonas.Add(persona);

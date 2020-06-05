@@ -6,3 +6,5 @@ C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\bin\Debug\Enti
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\obj\Debug\Infraestructura.csproj.CopyComplete
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\obj\Debug\Infraestructura.dll
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\obj\Debug\Infraestructura.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\bin\Debug\itextsharp.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\Infraestructura\bin\Debug\itextsharp.xml

@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LblPulsacion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.BtnCalcular = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnModificar = new System.Windows.Forms.Button();
@@ -44,8 +46,7 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.TxtIdentificacion = new System.Windows.Forms.TextBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.BtnCalcular);
@@ -118,8 +120,25 @@
             this.panel1.Controls.Add(this.LblEdad);
             this.panel1.Location = new System.Drawing.Point(21, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(474, 374);
+            this.panel1.Size = new System.Drawing.Size(559, 374);
             this.panel1.TabIndex = 5;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(137, 123);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(233, 20);
+            this.txtCorreo.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "CORREO: ";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // BtnCalcular
             // 
@@ -226,28 +245,21 @@
             this.cmbSexo.TabIndex = 5;
             this.cmbSexo.SelectedIndexChanged += new System.EventHandler(this.cmbSexo_SelectedIndexChanged);
             // 
-            // label2
+            // button1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "CORREO: ";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(137, 123);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(233, 20);
-            this.txtCorreo.TabIndex = 16;
+            this.button1.Location = new System.Drawing.Point(457, 282);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 76);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Generar Pdf";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 409);
+            this.ClientSize = new System.Drawing.Size(592, 409);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -281,6 +293,7 @@
         private System.Windows.Forms.Button BtnCalcular;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Button button1;
     }
 }
 

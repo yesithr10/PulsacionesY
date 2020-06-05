@@ -11,7 +11,7 @@ namespace Entity
     {
         public string Identificacion { get; set; }
         public string Nombre { get; set; }
-        public char Genero { get; set; }
+        public string Genero { get; set; }
         public int Edad { get; set; }
         public string Email { get; set; }
         public decimal Pulsacion { get; set; }

@@ -25,6 +25,7 @@ namespace Infraestructura
             smtp.Credentials = new System.Net.NetworkCredential("yesithm72@gmail.com", "2305f3e6");
         }
         private void ConfigurarEmail(Persona persona) {
+            string path = @"C:/Users/Orlando Rojano/Desktop/hhhhh.pdf";
             email = new MailMessage();
 
             email.To.Add(persona.Email);
@@ -38,6 +39,8 @@ namespace Infraestructura
             email.Body = $"<b>Sr {persona.Nombre }</b> <br " +
 
             $" > se ha realizado su registro Sartisfactoriamente";
+
+            email.Attachments.Add(new Attachment(path));
 
             email.IsBodyHtml = true;
 
@@ -70,7 +73,62 @@ namespace Infraestructura
             finally
 
             {
+                email.Dispose();
+            }
 
+        }
+
+        private void ConfigurarEmailPDF()
+        {
+            string path = @"C:/Users/Orlando Rojano/Desktop/hhhhh.pdf";
+            email = new MailMessage();
+
+            email.To.Add("anyambolano@unicesar.edu.co");
+
+            email.From = new MailAddress("yesithm72@gmail.com");
+
+            email.Subject = "Orlando Rojano Registro de Usuario "
+
+            + DateTime.Now.ToString("dd/MMM/yyy hh:mm:ss");
+
+            email.Body = $"<b>Sra Annya </b> <br " +
+
+            $" > se ha realizado su registro Sartisfactoriamente";
+
+            email.Attachments.Add(new Attachment(path));
+
+            email.IsBodyHtml = true;
+
+            email.Priority = MailPriority.Normal;
+        }
+
+        public string EnviarEmailPDF()
+        {
+            try
+
+            {
+
+                ConfigurarSmt();
+
+                ConfigurarEmailPDF();
+
+                smtp.Send(email);
+
+                return ("Correo enviado Satifactoriamente");
+
+            }
+
+            catch (Exception e)
+
+            {
+
+                return ("error al enviar correo" + e.Message);
+
+            }
+
+            finally
+
+            {
                 email.Dispose();
             }
 

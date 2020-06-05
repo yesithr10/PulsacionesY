@@ -10,3 +10,5 @@ C:\Users\Orlando Rojano\source\repos\PulsacionesY\BLL\obj\Debug\BLL.dll
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\BLL\obj\Debug\BLL.pdb
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\BLL\bin\Debug\Infraestructura.dll
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\BLL\bin\Debug\Infraestructura.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\BLL\bin\Debug\itextsharp.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\BLL\bin\Debug\itextsharp.xml

@@ -57,7 +57,7 @@ namespace PulsacionesY
             Console.WriteLine("Digite su edad");
             persona.Edad = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Digite su sexo M/F");
-            persona.Genero = Convert.ToChar(Console.ReadLine().ToUpper());
+            persona.Genero = Console.ReadLine().ToUpper();
             Console.WriteLine($"Sus pulsaciones son: {personaService.CalcularPulsaciones(persona)}");
             personaService.Guardar(persona);
         }
@@ -122,7 +122,7 @@ namespace PulsacionesY
                     Console.WriteLine("Edad: ");
                     persona.Edad = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Sexo: M|F");
-                    persona.Genero = Convert.ToChar(Console.ReadLine().ToUpper());
+                    persona.Genero = Console.ReadLine().ToUpper();
 
 
                     Console.WriteLine(personaService.CalcularPulsaciones(persona));

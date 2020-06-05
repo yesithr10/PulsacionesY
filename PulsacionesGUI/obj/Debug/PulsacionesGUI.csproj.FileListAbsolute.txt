@@ -16,3 +16,5 @@ C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesGUI\obj\Debug\Pulsa
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesGUI\obj\Debug\PulsacionesGUI.pdb
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesGUI\bin\Debug\Infraestructura.dll
 C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesGUI\bin\Debug\Infraestructura.pdb
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesGUI\bin\Debug\itextsharp.dll
+C:\Users\Orlando Rojano\source\repos\PulsacionesY\PulsacionesGUI\bin\Debug\itextsharp.xml

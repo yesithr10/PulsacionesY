@@ -12,7 +12,7 @@ using BLL;
 
 namespace PulsacionesGUI
 {
-    
+
     public partial class Form1 : Form
     {
         Persona persona;
@@ -24,7 +24,7 @@ namespace PulsacionesGUI
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -50,23 +50,39 @@ namespace PulsacionesGUI
         private void BtnCalcular_Click(object sender, EventArgs e)
         {
             crearPersona();
-            TxtPulsacion.Text = Convert.ToString(personaService.CalcularPulsaciones(persona)); 
+            TxtPulsacion.Text = Convert.ToString(personaService.CalcularPulsaciones(persona));
         }
         private void crearPersona()
         {
-            persona = new Persona();
-            persona.Identificacion = TxtIdentificacion.Text.Trim();
-            persona.Nombre = TxtNombre.Text.Trim();
-            persona.Edad = Convert.ToInt32(TxtEdad.Text.Trim());
-            persona.Genero = Convert.ToChar(cmbSexo.SelectedItem);
-            persona.Email = txtCorreo.Text.Trim();
+            try
+            {
+                persona = new Persona();
+                persona.Identificacion = TxtIdentificacion.Text.Trim();
+                persona.Nombre = TxtNombre.Text.Trim();
+                persona.Edad = Convert.ToInt32(TxtEdad.Text.Trim());
+                persona.Genero = cmbSexo.SelectedItem.ToString();
+                persona.Email = txtCorreo.Text.Trim();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Los datos son incorrectos", "Datos erroneos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            }
+
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             crearPersona();
             TxtPulsacion.Text = Convert.ToString(personaService.CalcularPulsaciones(persona));
-            personaService.Guardar(persona);
+            try
+            {
+                personaService.Guardar(persona);
+                MessageBox.Show("Persona guardada satisfactoriamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se pudo guardar esta persona", "Guardado incorectamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -89,6 +105,30 @@ namespace PulsacionesGUI
         private void label2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Guardar Informe";
+            saveFileDialog.InitialDirectory = @"c:/document";
+            saveFileDialog.DefaultExt = "pdf";
+            string filename = "";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filename = saveFileDialog.FileName;
+                if (filename != "" && personaService.Leer().Count > 0)
+                {
+                    string mensaje = personaService.GenerarPdf(personaService.Leer(), filename);
+
+                    MessageBox.Show(mensaje, "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("No se especifico una ruta o No hay datos para generar el reporte", "Generar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

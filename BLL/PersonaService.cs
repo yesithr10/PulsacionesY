@@ -11,11 +11,13 @@ namespace BLL
 {
     public class PersonaService
     {
+        Email email = new Email();
+        string mensajeEmail = String.Empty;
         PersonaRepository personaRepository;
         public decimal CalcularPulsaciones(Persona persona)
         {
             decimal divisor = 10;
-            if (persona.Genero == 'M')
+            if (persona.Genero.Equals("M"))
             {
                 persona.Pulsacion = (210 - persona.Edad) / divisor;
                 return persona.Pulsacion;
@@ -30,10 +32,10 @@ namespace BLL
         {
             personaRepository = new PersonaRepository();
         }
+
         public string Guardar(Persona persona)
         {
-            Email email = new Email();
-            string mensajeEmail = String.Empty;
+            
             try
             {
                 personaRepository.Guardar(persona);
@@ -56,6 +58,22 @@ namespace BLL
         public void Modificar(string identificacion,Persona persona)
         {
             personaRepository.Modificar(identificacion,persona);
+        }
+        public string GenerarPdf(List<Persona> personas, string filename)
+        {
+            ArchivoPdf archivoPdf = new ArchivoPdf();
+            try
+            {
+                Persona persona = new Persona();
+                archivoPdf.GuardarPdf(personas, filename);
+                mensajeEmail = email.EnviarEmailPDF();
+                return "Archivo generado con exito " + mensajeEmail;
+            }
+            catch (Exception e)
+            {
+
+                return "Error al crear docuemnto" + e.Message;
+            }
         }
 
     }
